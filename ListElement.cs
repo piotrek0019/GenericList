@@ -10,8 +10,14 @@ namespace GenericListProject
     /// Element of the generic list
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    internal class ListElement<T> where T : class
+    public class ListElement<T> where T : class
     {
+        //TODO might not need an index and just dynamic indexing
+        /// <summary>
+        /// An Id of an element
+        /// </summary>
+        public int Id { get; set; }
+
         /// <summary>
         /// An element of the collection
         /// </summary>

@@ -15,7 +15,21 @@ for (int i = 1; i < 6; i++)
 {
     alist.Add($"{justText}: {i.ToString()}");
 }
+for (int i = 1; i < 6; i++)
+{
+    alist.AddBefore($"{justText}: {i.ToString()}");
+}
 
+foreach (var element in alist)
+{
+    Console.WriteLine(element);
+}
+
+var elementAt4 = alist.GetElementAt(5);
+Console.WriteLine($"Value of element at 4 is: {elementAt4.Value}");
+alist.DeleteElementAt(11);
+
+Console.WriteLine("After deletion....");
 foreach (var element in alist)
 {
     Console.WriteLine(element);
