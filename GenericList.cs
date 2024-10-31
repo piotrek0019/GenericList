@@ -95,6 +95,32 @@ namespace GenericListProject
         }
 
         /// <summary>
+        /// Update value at given index of the collection
+        /// </summary>
+        /// <param name="index">The index of the element</param>
+        /// <param name="newValue">The new value to set</param>
+        public void UpdateValueAt(int index, T newValue)
+        {
+            var currentElement = element;
+            for (var i = 0; i < index; i++)
+            {
+                if (currentElement.Element == null)
+                {
+                    break;
+                }
+                currentElement = currentElement.Element;
+            }
+
+            if (currentElement != null)
+            {
+                currentElement.Value = newValue;
+                return;
+            }
+            throw new IndexOutOfRangeException($"Index: {index} is out of range.");
+        }
+
+
+        /// <summary>
         /// Delete element at given index
         /// </summary>
         /// <param name="index">Index of searched element</param>

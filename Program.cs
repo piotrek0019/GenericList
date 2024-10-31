@@ -1,6 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-using GenericListProject;
+﻿using GenericListProject;
 
+//Just testing here
 var justText = "Here Peter";
 var justTextTwo = "Here Peter Two";
 var justTextThree = "Here Peter Three";
@@ -27,7 +27,8 @@ foreach (var element in alist)
 
 var elementAt4 = alist.GetElementAt(5);
 Console.WriteLine($"Value of element at 4 is: {elementAt4.Value}");
-alist.DeleteElementAt(11);
+//alist.DeleteElementAt(11);
+alist.UpdateValueAt(11, "newText");
 
 Console.WriteLine("After deletion....");
 foreach (var element in alist)
